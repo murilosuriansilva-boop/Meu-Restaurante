@@ -1,0 +1,246 @@
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+	<nav>
+    <a href="index.html">Início</a> |
+    <a href="cardapio.html">Cardápio de Produtos</a> |
+    <a href="checkout.html">Finalizar Pedido</a>
+</nav>
+
+<header><h1>🍔Sabor & Cia Delivery</h1></header>
+
+<em>Finalize Seu Pedido Em Poucos Passos!</em>
+
+
+<p align="center">🔒 Formulário Seguro de Finalização do Pedido | Preencha seus dados para entrega rápida</p>
+
+<hr>
+
+<header align="center">
+    <h1>🍔 Sabor &amp; Cia Delivery</h1>
+    <p><em>Finalize seu Pedido em Poucos Passos</em></p>
+    
+    <nav>
+        <a href="index.html">Início</a> | 
+        <a href="produtos.html">Cardápio de Produtos</a> | 
+        <a href="checkout.html">Finalizar Pedido</a>
+    </nav>
+</header>
+
+<hr>
+
+<section>
+    <h2>💳 Dados para Entrega e Pagamento</h2>
+    <p>Preencha os campos abaixo para confirmarmos seu pedido na cozinha:</p>
+
+    <form action="sucesso.html" method="GET">
+        <table border="0" width="100%" cellpadding="10" cellspacing="0">
+            <tr valign="top">
+                <!-- COLUNA ESQUERDA: FORMULÁRIO -->
+                <td width="65%">
+                    
+                    <!-- 1. Dados Pessoais -->
+                    <fieldset>
+                        <legend>👤 1. Seus Dados Pessoais</legend>
+                        <p>
+                            <label for="nome">Nome Completo: *</label><br>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome e sobrenome" size="40" required>
+                        </p>
+                        <p>
+                            <label for="email">E-mail para Confirmação: *</label><br>
+                            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" size="40" required>
+                        </p>
+                        <p>
+                            <label for="tel">WhatsApp / Celular com DDD: *</label><br>
+                            <input type="tel" id="tel" name="tel" placeholder="(11) 98765-4321" size="30" required>
+                        </p>
+                    </fieldset>
+
+                    <br>
+
+                    <!-- 2. Endereço de Entrega -->
+                    <fieldset>
+                        <legend>📍 2. Endereço de Entrega</legend>
+                        <p>
+                            <label for="rua">Rua / Avenida: *</label><br>
+                            <input type="text" id="rua" name="rua" placeholder="Ex: Rua das Flores" size="40" required>
+                        </p>
+                        <p>
+                            <label for="numero">Número: *</label><br>
+                            <input type="text" id="numero" name="numero" placeholder="Ex: 123" size="10" required>
+                        </p>
+                        <p>
+                            <label for="complemento">Complemento (Apto, Bloco, Casa):</label><br>
+                            <input type="text" id="complemento" name="complemento" placeholder="Ex: Apto 32" size="30">
+                        </p>
+                        <p>
+                            <label for="bairro">Bairro: *</label><br>
+                            <select id="bairro" name="bairro" required>
+                                <option value="">Selecione o bairro de entrega...</option>
+                                <option value="centro">Centro</option>
+                                <option value="jardins">Jardins</option>
+                                <option value="vila-nova">Vila Nova</option>
+                                <option value="outro">Outro Bairro</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="referencia">Ponto de Referência:</label><br>
+                            <input type="text" id="referencia" name="referencia" placeholder="Ex: Próximo à padaria" size="40">
+                        </p>
+                    </fieldset>
+
+                    <br>
+
+                    <!-- 3. Item Escolhido & Personalização -->
+                    <fieldset>
+                        <legend>🍔 3. Item Escolhido &amp; Personalização</legend>
+                        <p>
+                            <label for="produto">Selecione o Produto Desejado: *</label><br>
+                            <select id="produto" name="produto" required>
+                                <option value="burger-bacon">Burger Bacon Supreme — R$ 36,90</option>
+                                <option value="burger-classico">Burger Clássico — R$ 29,90</option>
+                                <option value="smash-burger">Smash Burger Duplo Cheddar — R$ 28,90</option>
+                                <option value="pizza-calabresa">Pizza Calabresa Especial — R$ 45,00</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="quantidade">Quantidade:</label><br>
+                            <input type="number" id="quantidade" name="quantidade" value="1" min="1" max="10">
+                        </p>
+                        <p>
+                            <strong>Ponto da Carne (para lanches):</strong><br>
+                            <input type="radio" id="ponto-ponto" name="ponto" value="ao-ponto" checked>
+                            <label for="ponto-ponto">Ao Ponto (suculento)</label><br>
+                            <input type="radio" id="ponto-bem" name="ponto" value="bem-passado">
+                            <label for="ponto-bem">Bem Passado</label>
+                        </p>
+                        <p>
+                            <strong>Adicionais Opcionais:</strong><br>
+                            <input type="checkbox" id="add-bacon" name="adicionais[]" value="bacon">
+                            <label for="add-bacon">Bacon Crocante Extra (+ R$ 5,00)</label><br>
+                            <input type="checkbox" id="add-cheddar" name="adicionais[]" value="cheddar">
+                            <label for="add-cheddar">Queijo Cheddar Extra (+ R$ 4,00)</label><br>
+                            <input type="checkbox" id="add-refri" name="adicionais[]" value="refri">
+                            <label for="add-refri">Adicionar Refrigerante Lata (+ R$ 6,00)</label>
+                        </p>
+                        <p>
+                            <label for="obs">Observações para a Cozinha:</label><br>
+                            <textarea id="obs" name="observacoes" rows="4" cols="40" placeholder="Ex: Tirar cebola, cortar ao meio..."></textarea>
+                        </p>
+                    </fieldset>
+
+                    <br>
+
+                    <!-- 4. Forma de Pagamento -->
+                    <fieldset>
+                        <legend>💵 4. Forma de Pagamento</legend>
+                        <p>
+                            <input type="radio" id="pag-pix" name="pagamento" value="pix" checked>
+                            <label for="pag-pix"><strong>Pix (Receba a chave Pix / QR Code com 5% de desconto)</strong></label><br>
+                            
+                            <input type="radio" id="pag-cartao-credito" name="pagamento" value="credito-entrega">
+                            <label for="pag-cartao-credito">Cartão de Crédito na Entrega (Maquininha com o motoboy)</label><br>
+                            
+                            <input type="radio" id="pag-cartao-debito" name="pagamento" value="debito-entrega">
+                            <label for="pag-cartao-debito">Cartão de Débito na Entrega</label><br>
+                            
+                            <input type="radio" id="pag-dinheiro" name="pagamento" value="dinheiro">
+                            <label for="pag-dinheiro">Dinheiro em Espécie</label>
+                        </p>
+                        <p>
+                            <label for="troco">Troco para quanto em dinheiro? (se aplicável):</label><br>
+                            <input type="text" id="troco" name="troco" placeholder="Ex: 50 ou 100" size="20">
+                        </p>
+                    </fieldset>
+
+                </td>
+
+                <!-- COLUNA DIREITA: RESUMO DO PEDIDO E CONFIRMAÇÃO -->
+                <td width="35%">
+                    
+                    <!-- Resumo do Pedido -->
+                    <table border="1" cellpadding="8" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th colspan="2" align="center">📦 Resumo do Pedido</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1x Burger Bacon Supreme</td>
+                                <td align="right">R$ 36,90</td>
+                            </tr>
+                            <tr>
+                                <td>Adicional de Bacon Crocante</td>
+                                <td align="right">+ R$ 5,00</td>
+                            </tr>
+                            <tr>
+                                <td>Taxa de Entrega (Estimada)</td>
+                                <td align="right">+ R$ 7,00</td>
+                            </tr>
+                            <tr>
+                                <td>Desconto Cupom Primeira Compra</td>
+                                <td align="right">- R$ 5,00</td>
+                            </tr>
+                            <tr>
+                                <td><strong>TOTAL ESTIMADO:</strong></td>
+                                <td align="right"><strong><font color="red">R$ 43,90</font></strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <br><br>
+
+                    <!-- Status do Pedido -->
+                    <fieldset>
+                        <legend><strong>Status do Pedido</strong></legend>
+                        <p>Etapa do Pedido:</p>
+                        <progress value="50" max="100" style="width: 100%;"></progress>
+                    </fieldset>
+
+                    <br><br>
+
+                    <!-- Botão de Confirmação -->
+                    <fieldset>
+                        <legend><strong>Confirmação</strong></legend>
+                        <p>
+                            <input type="checkbox" id="confirma" name="confirma" required>
+                            <label for="confirma">Declaro que conferi meu endereço de entrega e os itens do pedido.</label>
+                        </p>
+                        <p align="center">
+                            <button type="submit">✅ Confirmar e Enviar Pedido</button>
+                        </p>
+                    </fieldset>
+
+                    <p align="center">
+                        <a href="produtos.html"><font color="red">← Voltar e escolher outro produto</font></a>
+                    </p>
+
+                </td>
+            </tr>
+        </table>
+    </form>
+</section>
+
+<hr>
+
+<!-- RODAPÉ -->
+<footer align="center">
+    <p>🍔 <strong>Sabor &amp; Cia Delivery</strong></p>
+    <p>Dúvidas sobre o pedido? Ligue para (11) 99999-9999 | Atendimento até 23:30</p>
+    <p>
+        <a href="index.html">Início</a> | 
+        <a href="produtos.html">Produtos</a> | 
+        <a href="checkout.html">Finalizar Pedido</a>
+    </p>
+    <p><small>Sabor &amp; Cia Delivery © 2026 - Todos os direitos reservados.</small></p>
+</footer>
+
+	
+</body>
+</html>
